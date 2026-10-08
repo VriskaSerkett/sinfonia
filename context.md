@@ -1,4 +1,4 @@
-# CONTEXT.MD — Plataforma Marketplace de Instrumentos Musicales Basada en Presupuesto
+# CONTEXT.MD — Plataforma Marketplace de Instrumentos Musicales Basada en Presupuesto.
 
 ## 1. Visión y Propósito del Proyecto
 Plataforma web tipo marketplace orientada a democratizar el acceso a la música resolviendo el principal cuello de botella: **encontrar un buen instrumento que se ajuste al presupuesto real del comprador**, con total transparencia técnica sobre su estado.
