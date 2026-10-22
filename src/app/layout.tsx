@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${newsreader.variable} ${plusJakartaSans.variable}`}>
-      <body className="min-h-screen bg-[#FAF8F5] text-[#262422] flex flex-col antialiased selection:bg-[#F3EFEA] selection:text-[#C25E38]">
+      <body className="min-h-screen bg-[#EDE6D6] text-[#16231C] flex flex-col antialiased selection:bg-[#DFEAE2] selection:text-[#173F2B]">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

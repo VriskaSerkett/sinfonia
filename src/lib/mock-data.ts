@@ -20,10 +20,16 @@ export const MOCK_INSTRUMENTS: Instrument[] = [
     includedAccessories: ["Funda acolchada impermeable 20mm", "Afinador de pinza Korg", "Juego de cuerdas D'Addario Pro Arte de repuesto"],
     images: [
       {
-        url: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1200&q=80",
+        url: "/instruments/guitarra-alhambra.jpg",
         isCover: true,
         isVerificationPass: true,
-        caption: "Plano general de cuerpo y mástil",
+        caption: "Plano frontal completo — Tapa de cedro macizo y mástil",
+      },
+      {
+        url: "/instruments/guitarra-detalle-roseta.jpg",
+        isCover: false,
+        isVerificationPass: true,
+        caption: "Detalle pericial de boca, roseta artesanal y puente",
       },
     ],
     isPublished: true,
@@ -52,10 +58,16 @@ export const MOCK_INSTRUMENTS: Instrument[] = [
     includedAccessories: ["Estuche rígido de madera a medida forrado en pana", "Certificado de autenticidad firmado y plano de tiro"],
     images: [
       {
-        url: "https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=1200&q=80",
+        url: "/instruments/guitarra-orfeo.jpg",
         isCover: true,
         isVerificationPass: true,
-        caption: "Tapa con barniz tradicional a muñequilla",
+        caption: "Vista frontal en pedestal de luthería — Lustre a muñequilla",
+      },
+      {
+        url: "/instruments/guitarra-detalle-roseta.jpg",
+        isCover: false,
+        isVerificationPass: true,
+        caption: "Detalle pericial de encordado y diapasón de ébano",
       },
     ],
     isPublished: true,
@@ -84,9 +96,10 @@ export const MOCK_INSTRUMENTS: Instrument[] = [
     includedAccessories: ["Boquilla Yamaha 4C original", "Abrazadera", "Estuche rígido original Yamaha", "Correa acolchada BG"],
     images: [
       {
-        url: "https://images.unsplash.com/photo-1525994886773-080587e161c2?auto=format&fit=crop&w=1200&q=80",
+        url: "/instruments/saxofon-yamaha.jpg",
         isCover: true,
         isVerificationPass: true,
+        caption: "Plano vertical completo — Campana, llaves, zapatillas y tudel",
       },
     ],
     isPublished: true,
@@ -116,9 +129,10 @@ export const MOCK_INSTRUMENTS: Instrument[] = [
     includedAccessories: ["Funda simple de transporte", "Correa de cuero marrón"],
     images: [
       {
-        url: "https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?auto=format&fit=crop&w=1200&q=80",
+        url: "/instruments/bajo-jazz-bass.jpg",
         isCover: true,
         isVerificationPass: true,
+        caption: "Plano completo en ángulo — Cuerpo de arce natural, pastillas y mástil",
       },
     ],
     isPublished: true,
@@ -146,9 +160,10 @@ export const MOCK_INSTRUMENTS: Instrument[] = [
     includedAccessories: ["Pedal de sustain DP-10 Roland progresivo", "Atril de partituras", "Fuente original 12V", "Funda antipolvo"],
     images: [
       {
-        url: "https://images.unsplash.com/photo-1520523839898-50712140e94a?auto=format&fit=crop&w=1200&q=80",
+        url: "/instruments/piano-roland.jpg",
         isCover: true,
         isVerificationPass: true,
+        caption: "Perspectiva de teclado de 88 notas, textura marfil y panel de control",
       },
     ],
     isPublished: true,
@@ -177,9 +192,10 @@ export const MOCK_INSTRUMENTS: Instrument[] = [
     includedAccessories: ["Funda acolchada con asas tipo mochila", "Llave allen de afinación de bordón"],
     images: [
       {
-        url: "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=1200&q=80",
+        url: "/instruments/cajon-flamenco.jpg",
         isCover: true,
         isVerificationPass: true,
+        caption: "Vista frontal completa — Tapa de cedro misionero y tornillería de tensión",
       },
     ],
     isPublished: true,

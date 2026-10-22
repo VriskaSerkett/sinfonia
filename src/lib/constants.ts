@@ -122,27 +122,27 @@ export const CONDITION_LABELS: Record<
 > = {
   [InstrumentCondition.BRAND_NEW]: {
     label: "Nuevo en caja",
-    badgeClass: "bg-emerald-50 text-emerald-800 border-emerald-200",
+    badgeClass: "bg-[#DFEAE2] text-[#1D4A34] border-[#C2D6C7]",
     description: "Sin uso previo, con garantía oficial de fábrica.",
   },
   [InstrumentCondition.LUTHIER_CRAFT]: {
     label: "Pieza de Luthier",
-    badgeClass: "bg-[#F7EFE6] text-[#A67C52] border-[#E2CFB8]",
+    badgeClass: "bg-[#E5ECE7] text-[#23583C] border-[#BFD4C5]",
     description: "Construcción artesanal de autor, maderas estacionadas y ajuste pericial.",
   },
   [InstrumentCondition.USED_EXCELLENT]: {
     label: "Usado Impecable",
-    badgeClass: "bg-[#F3EFEA] text-[#262422] border-[#E6DFD5]",
+    badgeClass: "bg-[#FAF7F0] text-[#16231C] border-[#D5CAB8]",
     description: "Mínimas marcas de uso estético. 100% operativo sin necesidad de calibración.",
   },
   [InstrumentCondition.USED_FAIR]: {
     label: "Usado con Desgaste",
-    badgeClass: "bg-stone-100 text-stone-700 border-stone-200",
+    badgeClass: "bg-[#E6DECE] text-[#4B5B51] border-[#D5CAB8]",
     description: "Signos claros de uso que no alteran la acústica ni la integridad estructural.",
   },
   [InstrumentCondition.NEEDS_REPAIR]: {
     label: "Oportunidad / A Calibrar",
-    badgeClass: "bg-amber-50 text-[#D97706] border-amber-200",
+    badgeClass: "bg-[#FEF3C7] text-[#C0681E] border-[#FDE68A]",
     description: "Precio rebajado. Requiere cambio de cuerdas, nivelación o ajuste menor.",
   },
 };

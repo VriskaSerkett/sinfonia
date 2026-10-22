@@ -2,21 +2,22 @@
 
 @layer base {
   :root {
-    --canvas: #FAF8F5;
-    --canvas-subtle: #F5EFE6;
-    --surface: #FFFFFF;
-    --surface-soft: #F3EFEA;
-    --border-sand: #E6DFD5;
-    --border-sand-dark: #D4C9BC;
-    --charcoal: #262422;
-    --charcoal-muted: #6E675F;
-    --charcoal-subtle: #9E968D;
-    --terracotta: #C25E38;
-    --terracotta-hover: #AA4F2D;
-    --terracotta-light: #FBF1EC;
-    --oak: #A67C52;
-    --oak-light: #F6F1EA;
-    --amber-warm: #D97706;
+    --canvas: #EDE6D6;
+    --canvas-subtle: #E2DAC9;
+    --surface: #FAF7F0;
+    --surface-soft: #E6DECE;
+    --surface-card: #FAF7F0;
+    --border-sand: #D5CAB8;
+    --border-sand-dark: #C0B29C;
+    --charcoal: #16231C;
+    --charcoal-muted: #4B5B51;
+    --charcoal-subtle: #728478;
+    --forest: #23583C;
+    --forest-hover: #173F2B;
+    --forest-light: #DFEAE2;
+    --sage: #3B674E;
+    --sage-light: #E7EFE9;
+    --amber-warm: #C0681E;
     --amber-warm-light: #FEF3C7;
   }
 
@@ -49,16 +50,16 @@ input[type="range"].slider-tactile:focus {
 
 input[type="range"].slider-tactile::-webkit-slider-runnable-track {
   height: 6px;
-  background: #E6DFD5;
+  background: #D5CAB8;
   border-radius: 9999px;
-  border: 1px solid #D4C9BC;
+  border: 1px solid #C0B29C;
 }
 
 input[type="range"].slider-tactile::-moz-range-track {
   height: 6px;
-  background: #E6DFD5;
+  background: #D5CAB8;
   border-radius: 9999px;
-  border: 1px solid #D4C9BC;
+  border: 1px solid #C0B29C;
 }
 
 input[type="range"].slider-tactile::-webkit-slider-thumb {
@@ -67,29 +68,29 @@ input[type="range"].slider-tactile::-webkit-slider-thumb {
   margin-top: -8px;
   width: 22px;
   height: 22px;
-  background-color: #C25E38;
-  border: 2px solid #FFFFFF;
+  background-color: #23583C;
+  border: 2px solid #FAF7F0;
   border-radius: 50%;
-  box-shadow: 0 1px 4px rgba(38, 36, 34, 0.25);
+  box-shadow: 0 1px 4px rgba(22, 35, 28, 0.35);
   transition: transform 0.15s ease, background-color 0.15s ease;
 }
 
 input[type="range"].slider-tactile::-webkit-slider-thumb:hover {
-  background-color: #AA4F2D;
+  background-color: #173F2B;
   transform: scale(1.1);
 }
 
 input[type="range"].slider-tactile::-moz-range-thumb {
   width: 22px;
   height: 22px;
-  background-color: #C25E38;
-  border: 2px solid #FFFFFF;
+  background-color: #23583C;
+  border: 2px solid #FAF7F0;
   border-radius: 50%;
-  box-shadow: 0 1px 4px rgba(38, 36, 34, 0.25);
+  box-shadow: 0 1px 4px rgba(22, 35, 28, 0.35);
   transition: transform 0.15s ease, background-color 0.15s ease;
 }
 
 input[type="range"].slider-tactile::-moz-range-thumb:hover {
-  background-color: #AA4F2D;
+  background-color: #173F2B;
   transform: scale(1.1);
 }

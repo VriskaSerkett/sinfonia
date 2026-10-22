@@ -11,9 +11,6 @@ import {
   SlidersHorizontal,
   AlertCircle,
   ArrowUpDown,
-  X,
-  Hammer,
-  ShieldCheck,
 } from "lucide-react";
 
 function CatalogueContent() {
@@ -90,14 +87,14 @@ function CatalogueContent() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
       {/* Header del Catálogo */}
       <div className="space-y-2">
-        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#A67C52]">
+        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#3B674E]">
           <SlidersHorizontal className="w-3.5 h-3.5 stroke-[1.75]" />
           <span>Inventario Verificado</span>
         </div>
-        <h1 className="font-editorial text-3xl sm:text-4xl font-medium text-[#262422]">
+        <h1 className="font-editorial text-3xl sm:text-4xl font-medium text-[#16231C]">
           Catálogo Filtrado por Presupuesto Real
         </h1>
-        <p className="text-sm text-[#6E675F] max-w-2xl">
+        <p className="text-sm text-[#4B5B51] max-w-2xl">
           Ajustá el control deslizante para descubrir instrumentos acústicos, eléctricos y de luthería
           que no excedan tu capacidad de inversión real.
         </p>
@@ -114,26 +111,26 @@ function CatalogueContent() {
       />
 
       {/* Resultados de la búsqueda y Ordenamiento */}
-      <div className="pt-6 border-t border-[#E6DFD5] space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-[#6E675F]">
+      <div className="pt-6 border-t border-[#D5CAB8] space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-[#4B5B51]">
           <div>
             Mostrando{" "}
-            <strong className="text-[#262422]">{filteredInstruments.length} instrumentos</strong>{" "}
+            <strong className="text-[#16231C]">{filteredInstruments.length} instrumentos</strong>{" "}
             dentro del presupuesto de hasta{" "}
-            <strong className="text-[#C25E38] font-mono">
+            <strong className="text-[#23583C] font-mono">
               {formatCurrency(filters.maxBudget, filters.currency)}
             </strong>
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="font-medium text-[#262422] flex items-center gap-1">
+            <span className="font-medium text-[#16231C] flex items-center gap-1">
               <ArrowUpDown className="w-3.5 h-3.5 stroke-[1.75]" />
               Ordenar por:
             </span>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
-              className="bg-[#FFFFFF] border border-[#E6DFD5] rounded-md px-2.5 py-1.5 text-xs text-[#262422] outline-none focus:border-[#C25E38]"
+              className="bg-[#FAF7F0] border border-[#D5CAB8] rounded-md px-2.5 py-1.5 text-xs text-[#16231C] outline-none focus:border-[#23583C]"
             >
               <option value="price_asc">Menor precio primero</option>
               <option value="price_desc">Mayor precio primero</option>
@@ -149,12 +146,12 @@ function CatalogueContent() {
             ))}
           </div>
         ) : (
-          <div className="bg-[#FFFFFF] border border-[#E6DFD5] rounded-xl p-12 text-center space-y-3 max-w-lg mx-auto">
-            <AlertCircle className="w-8 h-8 text-[#A67C52] stroke-[1.75] mx-auto" />
-            <h3 className="font-editorial text-xl font-semibold text-[#262422]">
+          <div className="bg-[#FAF7F0] border border-[#D5CAB8] rounded-xl p-12 text-center space-y-3 max-w-lg mx-auto">
+            <AlertCircle className="w-8 h-8 text-[#3B674E] stroke-[1.75] mx-auto" />
+            <h3 className="font-editorial text-xl font-semibold text-[#16231C]">
               No hay instrumentos publicados en este rango exacto
             </h3>
-            <p className="text-xs text-[#6E675F] leading-relaxed">
+            <p className="text-xs text-[#4B5B51] leading-relaxed">
               Probá ampliar el presupuesto en el control deslizante o explorar otra categoría musical.
               Los instrumentos honestos se publican y reservan con rapidez.
             </p>
@@ -169,7 +166,7 @@ export default function CatalogoPage() {
   return (
     <Suspense
       fallback={
-        <div className="max-w-7xl mx-auto px-4 py-16 text-center text-xs text-[#6E675F]">
+        <div className="max-w-7xl mx-auto px-4 py-16 text-center text-xs text-[#4B5B51]">
           Cargando catálogo pericial...
         </div>
       }

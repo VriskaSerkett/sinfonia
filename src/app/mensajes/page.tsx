@@ -1,18 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import {
   ShieldCheck,
   Send,
   CheckCircle2,
   MapPin,
-  Clock,
-  Sparkles,
-  AlertTriangle,
-  ArrowRight,
-  User,
-  Package,
 } from "lucide-react";
 import { formatCurrency } from "@/lib/utils";
 
@@ -124,14 +117,14 @@ export default function MensajesPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
       {/* Cabecera */}
       <div className="space-y-1">
-        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#A67C52]">
-          <ShieldCheck className="w-4 h-4 text-[#C25E38] stroke-[1.75]" />
+        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#3B674E]">
+          <ShieldCheck className="w-4 h-4 text-[#23583C] stroke-[1.75]" />
           <span>Protocolo de Compra y Reserva Protegida</span>
         </div>
-        <h1 className="font-editorial text-2xl sm:text-3xl font-medium text-[#262422]">
+        <h1 className="font-editorial text-2xl sm:text-3xl font-medium text-[#16231C]">
           Bandeja de Acuerdos & Chat Pericial
         </h1>
-        <p className="text-xs sm:text-sm text-[#6E675F]">
+        <p className="text-xs sm:text-sm text-[#4B5B51]">
           Conversaciones directas para acordar cita de prueba, verificar defectos declarados y confirmar la entrega.
         </p>
       </div>
@@ -139,12 +132,12 @@ export default function MensajesPage() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Columna Izquierda: Lista de Conversaciones */}
         <div className="lg:col-span-4 space-y-4">
-          <div className="bg-[#FFFFFF] border border-[#E6DFD5] rounded-xl overflow-hidden shadow-sm">
-            <div className="p-4 border-b border-[#E6DFD5] text-xs font-semibold uppercase tracking-wider text-[#6E675F]">
+          <div className="bg-[#FAF7F0] border border-[#D5CAB8] rounded-xl overflow-hidden shadow-sm">
+            <div className="p-4 border-b border-[#D5CAB8] text-xs font-semibold uppercase tracking-wider text-[#4B5B51]">
               Tratativas Activas ({conversations.length})
             </div>
 
-            <div className="divide-y divide-[#E6DFD5]">
+            <div className="divide-y divide-[#D5CAB8]">
               {conversations.map((conv) => {
                 const isSelected = conv.id === activeConv.id;
                 return (
@@ -154,21 +147,21 @@ export default function MensajesPage() {
                     onClick={() => setActiveConvId(conv.id)}
                     className={`w-full text-left p-4 transition-colors flex flex-col gap-1.5 ${
                       isSelected
-                        ? "bg-[#FAF8F5] border-l-4 border-l-[#C25E38]"
-                        : "hover:bg-[#FAF8F5]/60"
+                        ? "bg-[#EDE6D6] border-l-4 border-l-[#23583C]"
+                        : "hover:bg-[#EDE6D6]/60"
                     }`}
                   >
                     <div className="flex items-center justify-between text-xs">
-                      <span className="font-semibold text-[#262422] line-clamp-1">
+                      <span className="font-semibold text-[#16231C] line-clamp-1">
                         {conv.counterpartName}
                       </span>
                       <span
                         className={`text-[10px] font-semibold px-2 py-0.5 rounded ${
                           conv.status === "RESERVED"
-                            ? "bg-amber-100 text-[#D97706]"
+                            ? "bg-[#FEF3C7] text-[#C0681E]"
                             : conv.status === "COMPLETED"
-                            ? "bg-emerald-100 text-emerald-800"
-                            : "bg-[#F3EFEA] text-[#6E675F]"
+                            ? "bg-[#E5ECE7] text-[#23583C]"
+                            : "bg-[#EDE6D6] text-[#4B5B51]"
                         }`}
                       >
                         {conv.status === "RESERVED"
@@ -179,11 +172,11 @@ export default function MensajesPage() {
                       </span>
                     </div>
 
-                    <div className="text-xs text-[#262422] font-editorial line-clamp-1">
+                    <div className="text-xs text-[#16231C] font-editorial line-clamp-1">
                       {conv.instrumentTitle}
                     </div>
 
-                    <div className="text-[11px] text-[#A67C52] font-mono">
+                    <div className="text-[11px] text-[#3B674E] font-mono">
                       {formatCurrency(conv.instrumentPrice, conv.currency)}
                     </div>
                   </button>
@@ -193,9 +186,9 @@ export default function MensajesPage() {
           </div>
 
           {/* Banner de Pautas de Seguridad Física */}
-          <div className="bg-[#F3EFEA] border border-[#E6DFD5] rounded-xl p-4 space-y-2 text-xs text-[#6E675F]">
-            <div className="flex items-center gap-1.5 text-[#262422] font-semibold">
-              <ShieldCheck className="w-4 h-4 text-[#C25E38] stroke-[1.75]" />
+          <div className="bg-[#FAF7F0] border border-[#D5CAB8] rounded-xl p-4 space-y-2 text-xs text-[#4B5B51]">
+            <div className="flex items-center gap-1.5 text-[#16231C] font-semibold">
+              <ShieldCheck className="w-4 h-4 text-[#23583C] stroke-[1.75]" />
               <span>Recomendaciones Periciales de Sinfonía</span>
             </div>
             <ul className="space-y-1.5 text-[11px] list-disc list-inside">
@@ -209,24 +202,24 @@ export default function MensajesPage() {
         {/* Columna Derecha: Ventana del Chat y Detalle del Acuerdo */}
         <div className="lg:col-span-8 flex flex-col gap-4">
           {/* Ficha Superior del Acuerdo */}
-          <div className="bg-[#FFFFFF] border border-[#E6DFD5] rounded-xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+          <div className="bg-[#FAF7F0] border border-[#D5CAB8] rounded-xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-[#A67C52]">
+                <span className="text-[10px] uppercase font-bold tracking-wider text-[#3B674E]">
                   {activeConv.counterpartRole === "LUTHIER_AUTHOR"
                     ? "Taller de Luthier"
                     : "Vendedor Particular"}
                 </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#E6DFD5]" />
-                <span className="text-xs text-[#6E675F] flex items-center gap-1">
-                  <MapPin className="w-3 h-3 text-[#A67C52] stroke-[1.75]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D5CAB8]" />
+                <span className="text-xs text-[#4B5B51] flex items-center gap-1">
+                  <MapPin className="w-3 h-3 text-[#3B674E] stroke-[1.75]" />
                   {activeConv.location}
                 </span>
               </div>
-              <h3 className="font-editorial text-lg font-semibold text-[#262422]">
+              <h3 className="font-editorial text-lg font-semibold text-[#16231C]">
                 {activeConv.instrumentTitle}
               </h3>
-              <div className="text-xs text-[#C25E38] font-mono font-semibold">
+              <div className="text-xs text-[#23583C] font-mono font-semibold">
                 Monto pactado: {formatCurrency(activeConv.instrumentPrice, activeConv.currency)}
               </div>
             </div>
@@ -237,7 +230,7 @@ export default function MensajesPage() {
                 <button
                   type="button"
                   onClick={handleAdvanceStatus}
-                  className="px-4 py-2 bg-[#A67C52] hover:bg-[#8E653E] text-[#FAF8F5] rounded-lg text-xs font-semibold shadow-sm transition-colors cursor-pointer"
+                  className="px-4 py-2 bg-[#3B674E] hover:bg-[#2F543F] text-[#FAF7F0] rounded-lg text-xs font-semibold shadow-sm transition-colors cursor-pointer"
                 >
                   Marcar como Reservado
                 </button>
@@ -246,13 +239,13 @@ export default function MensajesPage() {
                 <button
                   type="button"
                   onClick={handleAdvanceStatus}
-                  className="px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-[#FAF8F5] rounded-lg text-xs font-semibold shadow-sm transition-colors cursor-pointer"
+                  className="px-4 py-2 bg-[#23583C] hover:bg-[#173F2B] text-[#FAF7F0] rounded-lg text-xs font-semibold shadow-sm transition-colors cursor-pointer"
                 >
                   Confirmar Entrega Concretada
                 </button>
               )}
               {activeConv.status === "COMPLETED" && (
-                <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-800 border border-emerald-200 px-3 py-1.5 rounded-md text-xs font-semibold">
+                <span className="inline-flex items-center gap-1.5 bg-[#E5ECE7] text-[#23583C] border border-[#BFD4C5] px-3 py-1.5 rounded-md text-xs font-semibold">
                   <CheckCircle2 className="w-4 h-4 stroke-[1.75]" />
                   Transacción Concretada
                 </span>
@@ -261,15 +254,15 @@ export default function MensajesPage() {
           </div>
 
           {/* Ventana de Mensajes */}
-          <div className="bg-[#FFFFFF] border border-[#E6DFD5] rounded-xl flex flex-col h-[460px] overflow-hidden shadow-sm">
-            <div className="p-3 border-b border-[#E6DFD5] bg-[#FAF8F5] flex items-center justify-between text-xs text-[#6E675F]">
-              <span className="font-medium text-[#262422]">
+          <div className="bg-[#FAF7F0] border border-[#D5CAB8] rounded-xl flex flex-col h-[460px] overflow-hidden shadow-sm">
+            <div className="p-3 border-b border-[#D5CAB8] bg-[#EDE6D6] flex items-center justify-between text-xs text-[#4B5B51]">
+              <span className="font-medium text-[#16231C]">
                 Canal con {activeConv.counterpartName}
               </span>
               <span>Mensajería encriptada punto a punto</span>
             </div>
 
-            <div className="flex-1 p-4 overflow-y-auto space-y-3 bg-[#FAF8F5]/30">
+            <div className="flex-1 p-4 overflow-y-auto space-y-3 bg-[#EDE6D6]/40">
               {activeConv.messages.map((m, idx) => (
                 <div
                   key={idx}
@@ -280,29 +273,29 @@ export default function MensajesPage() {
                   <div
                     className={`max-w-[78%] p-3.5 rounded-xl text-xs leading-relaxed ${
                       m.sender === "me"
-                        ? "bg-[#262422] text-[#FAF8F5] rounded-br-none"
-                        : "bg-[#FFFFFF] border border-[#E6DFD5] text-[#262422] rounded-bl-none shadow-sm"
+                        ? "bg-[#23583C] text-[#FAF7F0] rounded-br-none"
+                        : "bg-[#FAF7F0] border border-[#D5CAB8] text-[#16231C] rounded-bl-none shadow-sm"
                     }`}
                   >
                     {m.text}
                   </div>
-                  <span className="text-[10px] text-[#9E968D] mt-1 px-1">{m.time}</span>
+                  <span className="text-[10px] text-[#728478] mt-1 px-1">{m.time}</span>
                 </div>
               ))}
             </div>
 
             {/* Input para Enviar */}
-            <form onSubmit={handleSend} className="p-3 border-t border-[#E6DFD5] bg-[#FFFFFF] flex gap-2">
+            <form onSubmit={handleSend} className="p-3 border-t border-[#D5CAB8] bg-[#FAF7F0] flex gap-2">
               <input
                 type="text"
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
                 placeholder="Escribí tu consulta sobre estado o acordá punto de encuentro..."
-                className="flex-1 bg-[#FAF8F5] border border-[#E6DFD5] rounded-lg px-4 py-2.5 text-xs text-[#262422] outline-none focus:border-[#C25E38]"
+                className="flex-1 bg-[#EDE6D6] border border-[#D5CAB8] rounded-lg px-4 py-2.5 text-xs text-[#16231C] outline-none focus:border-[#23583C]"
               />
               <button
                 type="submit"
-                className="px-5 py-2.5 bg-[#C25E38] hover:bg-[#AA4F2D] text-[#FAF8F5] rounded-lg text-xs font-semibold inline-flex items-center gap-1.5 transition-colors cursor-pointer"
+                className="px-5 py-2.5 bg-[#23583C] hover:bg-[#173F2B] text-[#FAF7F0] rounded-lg text-xs font-semibold inline-flex items-center gap-1.5 transition-colors cursor-pointer"
               >
                 <Send className="w-3.5 h-3.5 stroke-[1.75]" />
                 <span>Enviar</span>

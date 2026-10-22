@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ShieldCheck, User, ArrowRight } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -11,18 +11,18 @@ export default function LoginPage() {
   return (
     <div className="max-w-md mx-auto px-4 py-16 space-y-8">
       <div className="text-center space-y-2">
-        <span className="font-editorial text-3xl font-medium text-[#262422]">
+        <span className="font-editorial text-3xl font-medium text-[#16231C]">
           Acceso a Sinfonía
         </span>
-        <p className="text-xs text-[#6E675F]">
+        <p className="text-xs text-[#4B5B51]">
           Ingresá para guardar tus instrumentos favoritos, publicar o acordar reservas por chat.
         </p>
       </div>
 
-      <div className="bg-[#FFFFFF] border border-[#E6DFD5] rounded-xl p-6 sm:p-8 space-y-6 shadow-sm">
+      <div className="bg-[#FAF7F0] border border-[#D5CAB8] rounded-xl p-6 sm:p-8 space-y-6 shadow-sm">
         {/* Selector de Rol */}
         <div className="space-y-2">
-          <label className="block text-xs font-semibold uppercase tracking-wider text-[#6E675F]">
+          <label className="block text-xs font-semibold uppercase tracking-wider text-[#4B5B51]">
             Modo de ingreso
           </label>
           <div className="grid grid-cols-3 gap-2">
@@ -31,8 +31,8 @@ export default function LoginPage() {
               onClick={() => setRole("BUYER")}
               className={`p-2.5 rounded-lg border text-xs font-semibold transition-colors ${
                 role === "BUYER"
-                  ? "bg-[#262422] text-[#FAF8F5] border-[#262422]"
-                  : "bg-[#FAF8F5] border-[#E6DFD5] text-[#6E675F]"
+                  ? "bg-[#23583C] text-[#FAF7F0] border-[#23583C]"
+                  : "bg-[#EDE6D6] border-[#D5CAB8] text-[#4B5B51]"
               }`}
             >
               Comprador
@@ -42,8 +42,8 @@ export default function LoginPage() {
               onClick={() => setRole("SELLER")}
               className={`p-2.5 rounded-lg border text-xs font-semibold transition-colors ${
                 role === "SELLER"
-                  ? "bg-[#262422] text-[#FAF8F5] border-[#262422]"
-                  : "bg-[#FAF8F5] border-[#E6DFD5] text-[#6E675F]"
+                  ? "bg-[#23583C] text-[#FAF7F0] border-[#23583C]"
+                  : "bg-[#EDE6D6] border-[#D5CAB8] text-[#4B5B51]"
               }`}
             >
               Particular
@@ -53,8 +53,8 @@ export default function LoginPage() {
               onClick={() => setRole("LUTHIER")}
               className={`p-2.5 rounded-lg border text-xs font-semibold transition-colors ${
                 role === "LUTHIER"
-                  ? "bg-[#A67C52] text-[#FAF8F5] border-[#A67C52]"
-                  : "bg-[#FAF8F5] border-[#E6DFD5] text-[#6E675F]"
+                  ? "bg-[#3B674E] text-[#FAF7F0] border-[#3B674E]"
+                  : "bg-[#EDE6D6] border-[#D5CAB8] text-[#4B5B51]"
               }`}
             >
               Luthier
@@ -70,7 +70,7 @@ export default function LoginPage() {
           className="space-y-4"
         >
           <div className="space-y-1.5">
-            <label className="block text-xs font-semibold uppercase tracking-wider text-[#6E675F]">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-[#4B5B51]">
               Correo Electrónico
             </label>
             <input
@@ -79,13 +79,13 @@ export default function LoginPage() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="tu.correo@ejemplo.com"
               required
-              className="w-full bg-[#FAF8F5] border border-[#E6DFD5] rounded-lg p-3 text-sm text-[#262422] outline-none focus:border-[#C25E38]"
+              className="w-full bg-[#EDE6D6] border border-[#D5CAB8] rounded-lg p-3 text-sm text-[#16231C] outline-none focus:border-[#23583C]"
             />
           </div>
 
-          <div className="bg-[#FAF8F5] border border-[#E6DFD5] rounded-lg p-3 text-[11px] text-[#6E675F] space-y-1">
-            <div className="flex items-center gap-1 font-semibold text-[#262422]">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#C25E38]" />
+          <div className="bg-[#EDE6D6] border border-[#D5CAB8] rounded-lg p-3 text-[11px] text-[#4B5B51] space-y-1">
+            <div className="flex items-center gap-1 font-semibold text-[#16231C]">
+              <ShieldCheck className="w-3.5 h-3.5 text-[#23583C]" />
               <span>Verificación de Mayoría de Edad (+18)</span>
             </div>
             <p>
@@ -95,14 +95,14 @@ export default function LoginPage() {
 
           <button
             type="submit"
-            className="w-full py-3 bg-[#C25E38] hover:bg-[#AA4F2D] text-[#FAF8F5] text-xs font-semibold rounded-lg shadow-sm transition-colors cursor-pointer"
+            className="w-full py-3 bg-[#23583C] hover:bg-[#173F2B] text-[#FAF7F0] text-xs font-semibold rounded-lg shadow-sm transition-colors cursor-pointer"
           >
             Continuar a Sinfonía
           </button>
         </form>
 
-        <div className="text-center text-xs text-[#6E675F] pt-2 border-t border-[#E6DFD5]">
-          <Link href="/" className="hover:text-[#262422] underline underline-offset-2">
+        <div className="text-center text-xs text-[#4B5B51] pt-2 border-t border-[#D5CAB8]">
+          <Link href="/" className="hover:text-[#16231C] underline underline-offset-2">
             Volver a la página principal
           </Link>
         </div>

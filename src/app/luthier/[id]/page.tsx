@@ -5,11 +5,8 @@ import {
   Award,
   MapPin,
   Calendar,
-  CheckCircle2,
   TreePine,
-  ShieldCheck,
   ArrowLeft,
-  Sparkles,
   MessageSquare,
 } from "lucide-react";
 import InstrumentCard from "@/components/instruments/InstrumentCard";
@@ -52,8 +49,7 @@ export const MOCK_LUTHIERS: Record<string, LuthierProfileData> = {
     ],
     avatarUrl:
       "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=400&q=80",
-    coverUrl:
-      "https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=1400&q=80",
+    coverUrl: "/instruments/guitarra-orfeo.jpg",
   },
   "la-fragua": {
     id: "la-fragua",
@@ -74,8 +70,7 @@ export const MOCK_LUTHIERS: Record<string, LuthierProfileData> = {
     ],
     avatarUrl:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
-    coverUrl:
-      "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=1400&q=80",
+    coverUrl: "/instruments/cajon-flamenco.jpg",
   },
 };
 
@@ -106,7 +101,7 @@ export default async function LuthierProfilePage({ params }: LuthierPageProps) {
       <div>
         <Link
           href="/instrumentos?condition=LUTHIER_CRAFT"
-          className="inline-flex items-center gap-2 text-xs font-semibold text-[#6E675F] hover:text-[#262422] transition-colors"
+          className="inline-flex items-center gap-2 text-xs font-semibold text-[#4B5B51] hover:text-[#16231C] transition-colors"
         >
           <ArrowLeft className="w-4 h-4 stroke-[1.75]" />
           <span>Volver a instrumentos de Luthería</span>
@@ -114,20 +109,20 @@ export default async function LuthierProfilePage({ params }: LuthierPageProps) {
       </div>
 
       {/* Cabecera del Taller con Portada Táctil */}
-      <div className="bg-[#FFFFFF] border border-[#E6DFD5] rounded-2xl overflow-hidden shadow-sm">
-        <div className="h-48 sm:h-64 bg-[#F3EFEA] relative overflow-hidden">
+      <div className="bg-[#FAF7F0] border border-[#D5CAB8] rounded-2xl overflow-hidden shadow-sm">
+        <div className="h-48 sm:h-64 bg-[#E5DDCB] relative overflow-hidden">
           <img
             src={luthier.coverUrl}
             alt={luthier.workshopName}
-            className="w-full h-full object-cover opacity-85"
+            className="w-full h-full object-cover opacity-90"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#262422]/70 via-transparent to-transparent" />
-          <div className="absolute bottom-4 left-6 sm:left-8 flex items-center gap-2 text-[#FAF8F5] text-xs">
-            <span className="bg-[#C25E38] px-2.5 py-1 rounded font-semibold flex items-center gap-1.5">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#16231C]/80 via-transparent to-transparent" />
+          <div className="absolute bottom-4 left-6 sm:left-8 flex items-center gap-2 text-[#FAF7F0] text-xs">
+            <span className="bg-[#23583C] px-2.5 py-1 rounded font-semibold flex items-center gap-1.5 shadow-sm">
               <Hammer className="w-3.5 h-3.5 stroke-[1.75]" />
               Taller de Autor Verificado
             </span>
-            <span className="hidden sm:inline bg-[#262422]/60 px-2.5 py-1 rounded backdrop-blur-xs">
+            <span className="hidden sm:inline bg-[#16231C]/60 px-2.5 py-1 rounded backdrop-blur-xs">
               {luthier.experienceYears} años de trayectoria
             </span>
           </div>
@@ -136,20 +131,20 @@ export default async function LuthierProfilePage({ params }: LuthierPageProps) {
         <div className="p-6 sm:p-8 space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
             <div className="space-y-1">
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-[#A67C52]">
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-[#3B674E]">
                 {luthier.specialty}
               </span>
-              <h1 className="font-editorial text-3xl sm:text-4xl font-semibold text-[#262422]">
+              <h1 className="font-editorial text-3xl sm:text-4xl font-semibold text-[#16231C]">
                 {luthier.workshopName}
               </h1>
-              <p className="text-xs sm:text-sm text-[#6E675F] flex items-center gap-3 pt-1">
+              <p className="text-xs sm:text-sm text-[#4B5B51] flex items-center gap-3 pt-1">
                 <span className="flex items-center gap-1">
-                  <MapPin className="w-3.5 h-3.5 text-[#A67C52] stroke-[1.75]" />
+                  <MapPin className="w-3.5 h-3.5 text-[#3B674E] stroke-[1.75]" />
                   {luthier.location}
                 </span>
                 <span>·</span>
                 <span className="flex items-center gap-1">
-                  <Calendar className="w-3.5 h-3.5 text-[#6E675F] stroke-[1.75]" />
+                  <Calendar className="w-3.5 h-3.5 text-[#4B5B51] stroke-[1.75]" />
                   Oficio desde 2002
                 </span>
               </p>
@@ -157,20 +152,20 @@ export default async function LuthierProfilePage({ params }: LuthierPageProps) {
 
             <Link
               href="/mensajes"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#C25E38] hover:bg-[#AA4F2D] text-[#FAF8F5] text-xs font-semibold shadow-sm transition-colors self-start sm:self-auto cursor-pointer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#23583C] hover:bg-[#173F2B] text-[#FAF7F0] text-xs font-semibold shadow-sm transition-colors self-start sm:self-auto cursor-pointer"
             >
               <MessageSquare className="w-4 h-4 stroke-[1.75]" />
               <span>Contactar al Taller</span>
             </Link>
           </div>
 
-          <p className="text-sm text-[#6E675F] leading-relaxed max-w-3xl">
+          <p className="text-sm text-[#4B5B51] leading-relaxed max-w-3xl">
             {luthier.bio}
           </p>
 
           {/* Banco de maderas estacionadas del taller */}
-          <div className="pt-4 border-t border-[#E6DFD5] space-y-3">
-            <div className="flex items-center gap-2 text-xs font-semibold text-[#A67C52] uppercase tracking-wider">
+          <div className="pt-4 border-t border-[#D5CAB8] space-y-3">
+            <div className="flex items-center gap-2 text-xs font-semibold text-[#3B674E] uppercase tracking-wider">
               <TreePine className="w-4 h-4 stroke-[1.75]" />
               <span>Maderas Estacionadas en Banco de Trabajo</span>
             </div>
@@ -178,9 +173,9 @@ export default async function LuthierProfilePage({ params }: LuthierPageProps) {
               {luthier.curedWoodVault.map((wood, idx) => (
                 <div
                   key={idx}
-                  className="bg-[#FAF8F5] border border-[#E6DFD5] rounded-md px-3 py-2 text-xs text-[#262422] font-medium flex items-center gap-2"
+                  className="bg-[#EDE6D6] border border-[#D5CAB8] rounded-md px-3 py-2 text-xs text-[#16231C] font-medium flex items-center gap-2"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#A67C52]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#3B674E]" />
                   <span>{wood}</span>
                 </div>
               ))}
@@ -188,17 +183,17 @@ export default async function LuthierProfilePage({ params }: LuthierPageProps) {
           </div>
 
           {/* Certificaciones y Membresías */}
-          <div className="pt-4 border-t border-[#E6DFD5] space-y-2">
-            <span className="text-xs font-semibold text-[#6E675F] uppercase tracking-wider block">
+          <div className="pt-4 border-t border-[#D5CAB8] space-y-2">
+            <span className="text-xs font-semibold text-[#4B5B51] uppercase tracking-wider block">
               Garantías de Oficio & Certificaciones
             </span>
             <div className="flex flex-wrap gap-2 text-xs">
               {luthier.certifications.map((cert, idx) => (
                 <span
                   key={idx}
-                  className="inline-flex items-center gap-1.5 bg-[#F3EFEA] border border-[#E6DFD5] px-3 py-1 rounded text-[#262422]"
+                  className="inline-flex items-center gap-1.5 bg-[#E5ECE7] border border-[#BFD4C5] px-3 py-1 rounded text-[#23583C] font-medium"
                 >
-                  <Award className="w-3.5 h-3.5 text-[#A67C52] stroke-[1.75]" />
+                  <Award className="w-3.5 h-3.5 text-[#23583C] stroke-[1.75]" />
                   <span>{cert}</span>
                 </span>
               ))}
@@ -209,16 +204,16 @@ export default async function LuthierProfilePage({ params }: LuthierPageProps) {
 
       {/* Obras e Instrumentos de este Luthier en Sinfonía */}
       <div className="space-y-6">
-        <div className="flex items-center justify-between border-b border-[#E6DFD5] pb-4">
+        <div className="flex items-center justify-between border-b border-[#D5CAB8] pb-4">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#A67C52]">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#3B674E]">
               Catálogo de Autor
             </span>
-            <h2 className="font-editorial text-2xl font-medium text-[#262422]">
+            <h2 className="font-editorial text-2xl font-medium text-[#16231C]">
               Piezas Disponibles en Taller
             </h2>
           </div>
-          <span className="text-xs text-[#6E675F]">
+          <span className="text-xs text-[#4B5B51]">
             Instrumentos listos para probar con cita pericial
           </span>
         </div>

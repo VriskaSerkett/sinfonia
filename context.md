@@ -1,7 +1,7 @@
 # CONTEXT.MD — Plataforma Marketplace de Instrumentos Musicales Basada en Presupuesto.
 
 ## 1. Visión y Propósito del Proyecto
-Plataforma web tipo marketplace orientada a democratizar el acceso a la música resolviendo el principal cuello de botella: **encontrar un buen instrumento que se ajuste al presupuesto real del comprador**, con total transparencia técnica sobre su estado.
+Plataforma web tipo marketplace orientada a facilitar el acceso a la música resolviendo el principal cuello de botella: **encontrar un buen instrumento que se ajuste al presupuesto real del comprador**, con total transparencia técnica sobre su estado.
 
 El marketplace une tres puntas:
 1. **Compradores con presupuesto definido:** Músicos principiantes, estudiantes o profesionales que buscan maximizar la calidad de su compra sin pagar de más.
@@ -15,15 +15,17 @@ El pilar ético de la plataforma es la **honestidad técnica radical**: cada pub
 ## 2. Directiva de Diseño: "Anti-AI Aesthetic" (Identidad Visual Orgánica)
 > **REGLA CRÍTICA:** Queda estrictamente prohibido el diseño genérico de IA (fondos oscuros con gradientes púrpuras/cian, glassmorphism con desenfoques excesivos, fuentes ultra-geométricas sin alma, botones flotantes con sombras de neón y espacios vacíos gigantescos).
 
-### Paleta de Colores (Cálida, Clara y Táctil)
-Inspirada en talleres de luthería, papel artesanal y maderas nobles. Colores claros, suaves y no saturados:
-- **Fondo Principal (Lienzo):** `#FAF8F5` (Blanco hueso / Papel cálido).
-- **Fondo Secundario (Superficies/Cards):** `#F3EFEA` o `#FFFFFF` con borde suave.
-- **Bordes y Separadores:** `#E6DFD5` (Tono arcilla/arena claro, 1px de grosor definido).
-- **Texto Principal:** `#262422` (Carbón cálido, nunca `#000000` puro).
-- **Texto Secundario:** `#6E675F` (Tono madera grisáceo).
-- **Acento / Énfasis:** `#C25E38` (Terracota / Cuero envejecido suave) o `#A67C52` (Roble dorado suave) para llamadas a la acción clave.
-- **Alertas / Estados de advertencia:** `#D97706` (Ámbar cálido para detalles a reparar).
+### Paleta de Colores (Cremas y Verdes Orgánicos)
+Inspirada en mesas de carpintería sonoras, papel artesanal de partituras, fieltro de luthería y maderas nobles. Tono medio crema cálido con excelente contraste editorial:
+- **Fondo Principal (Lienzo):** `#EDE6D6` (Lino medio crema cálido, orgánico y táctil, sin estridencias ni fondos blancos pálidos).
+- **Fondo Secundario (Superficies/Cards):** `#FAF7F0` (Superficie crema suave y cálida que reposa sobre el lienzo).
+- **Bordes y Separadores:** `#D5CAB8` (Tono arcilla / arena claro con grosor y nitidez definidos).
+- **Texto Principal:** `#16231C` (Carbón de bosque profundo / picea, altísimo contraste editorial sobre el fondo crema).
+- **Texto Secundario:** `#4B5B51` (Tono salvia / madera grisácea de alta legibilidad).
+- **Acento Principal (CTA y Enfoque):** `#23583C` (Verde bosque artesanal noble / paño de luthería).
+- **Acento Secundario (Taller y Vínculos):** `#3B674E` (Verde salvia / oliva profundo).
+- **Tonalidades para Badges:** `#DFEAE2` y `#E5ECE7` con bordes `#BFD4C5` y texto `#23583C`.
+- **Alertas / Estados de advertencia:** `#C0681E` (Ámbar cálido para detalles a reparar o calibrar).
 
 ### Tipografía y Composición
 - **Títulos / Identidad:** Tipografía con carácter editorial o humana (ej. `Newsreader`, `Playfair Display`, `Fraunces` o una sans humanista como `Plus Jakarta Sans` o `Cabinet Grotesk`).
